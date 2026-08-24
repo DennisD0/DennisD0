@@ -97,27 +97,58 @@ far I could take a prototype when the hard part is not the interface.
 ---
 
 <details>
-<summary><b>04 / Before this</b></summary>
+<summary><b>04 / Experience</b></summary>
 
 <br>
 
+**413 Youth Club**, Product Manager (Freelance), Jun 2026, Remote
+Used AI tools and agentic development to personally build and validate a member management
+platform serving 30+ members, directing delivery rather than relying solely on engineering
+handoff. Gathered customer insights through direct interviews with staff, translating
+workflow pain points into a prioritized backlog in Linear that reduced registration
+processing time by an estimated 60%. Monitored product performance across payment tracking,
+registration conversion, and member management workstreams, using dashboard analytics to
+inform continuous backlog prioritization.
+
+**En Hakkore Cafe**, Product Manager (Freelance), May 2026, New York
+Used AI assisted prototyping to validate a live order queue system before handing
+requirements to engineering, reducing back and forth and accelerating delivery for a 20+
+weekly order operation. Gathered customer feedback and analyzed order flow data to identify
+a failure mode in the payment and tracking workflow, scoping the fix and validating the
+solution before it reached users. Maintained documentation and release communications across
+order status workflows in Linear, keeping the client aligned through each delivery milestone
+with no surprises at go live.
+
 **Scout**, Product Designer, Oct 2025 to Jan 2026, New York
-Worked with engineering and design across the product lifecycle, mapped requirements in
-Figma and Miro, ran discovery across two sprint cycles on a cross functional team of five,
-and delivered 20+ high fidelity screens in a two week sprint.
+Partnered with engineering and design to support the product lifecycle from discovery
+through delivery, mapping requirements in Figma and Miro and tracking the backlog across
+multiple workstreams. Gathered customer insights across 2+ sprint cycles and synthesized
+feedback in Miro to prioritize the backlog, balancing user needs with technical feasibility
+across a cross functional team of 5+. Supported product launches and release communications,
+delivering 20+ high fidelity Figma screens within a two week sprint and keeping stakeholders
+aligned through on time demo readiness.
 
-**NASA L'SPACE**, Project Manager, May 2025 to Sep 2025
-Led an 8 member cross university team across 5 subsystems, ran Agile sprints, and tracked
-milestones on Gantt charts. Synthesized 20+ NASA and IEEE sources into a feasibility
-analysis documenting a 91% cost reduction and 74+ EVA hours saved. Every submission to
-NASA reviewers was approved.
+**NASA L'SPACE**, Project Manager, May 2025 to Sep 2025, New York
+Led an 8 member cross university team across 5 subsystems, running Agile sprint cycles in
+Google Workspace and Slack and building Gantt charts to track milestones from kickoff
+through final delivery. Used data and analytics to synthesize 20+ NASA and IEEE sources into
+a feasibility analysis documenting a 91% cost reduction and 74+ EVA hours saved, turning
+research into a decision ready report. Communicated product progress and blockers to NASA
+reviewers through structured status updates tailored to technical and nontechnical
+audiences, achieving 100% submission approval.
 
-**Research Foundation of CUNY**, Software Engineer Intern, Jul 2023 to Sep 2023
-Coordinated across 3 technical teams on deliverables and data requests, supporting
-campaigns with an 80% client retention rate. Found a workflow inefficiency and scoped a
-process improvement that cut retrieval time by 15%.
+**Research Foundation of CUNY**, Software Engineer Intern, Jul 2023 to Sep 2023, New York
+Coordinated across 3 technical teams to track deliverables and ensure all data requests were
+completed accurately and on time, supporting campaigns with an 80% client retention rate.
+Analyzed data workflows to identify an inefficiency, scoped a process improvement reducing
+retrieval time by 15%, and documented the solution with measurable success metrics for
+leadership. Communicated findings to technical and nontechnical stakeholders, maintaining
+organized documentation that kept all parties aligned throughout the delivery lifecycle.
 
-**ENERGY ESPORTS**, Founder, high school through freshman year
+**Education.** Bachelor of Arts in Computer Science, CUNY Queens College, Queens NY.
+Graduating Summer 2026.
+
+**ENERGY ESPORTS**, Founder, high school through freshman year (not on the resume)
 Started a competitive amateur team in the mobile FPS Standoff 2 that competed regionally
 and internationally, with a Discord community that reached 10,000 members. Closed three
 brand sponsorships through cold outreach, structured as discount codes so buyers using our
