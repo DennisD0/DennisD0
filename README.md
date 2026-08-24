@@ -21,7 +21,7 @@ to Forward Deployed Engineer work at technical product companies.
 [![Portfolio](https://img.shields.io/badge/Portfolio-personal--portfolio--bice--pi.vercel.app-52525B?style=flat-square&labelColor=52525B)](https://personal-portfolio-bice-pi.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dennis--do--coding-52525B?style=flat-square&labelColor=52525B)](https://linkedin.com/in/dennis-do-coding)
 [![Email](https://img.shields.io/badge/Email-dennisnasa%40gmail.com-52525B?style=flat-square&labelColor=52525B)](mailto:dennisnasa@gmail.com)
-[![Resume](https://img.shields.io/badge/Resume-PDF-52525B?style=flat-square&labelColor=52525B)](https://personal-portfolio-bice-pi.vercel.app/dennis-do-resume.pdf)
+[![Resume](https://img.shields.io/badge/Resume-PDF-52525B?style=flat-square&labelColor=52525B)](Dennis-Do-Resume.pdf)
 
 ---
 
