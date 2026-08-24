@@ -20,7 +20,7 @@ to Forward Deployed Engineer work at technical product companies.
 [![Email](https://img.shields.io/badge/Email-dennisnasa%40gmail.com-52525B?style=flat-square&labelColor=52525B)](mailto:dennisnasa@gmail.com)
 [![Resume](https://img.shields.io/badge/Resume-PDF-52525B?style=flat-square&labelColor=52525B)](https://personal-portfolio-bice-pi.vercel.app/dennis-do-resume.pdf)
 
----
+<img src="assets/divider-dark.svg" alt="" width="100%">
 
 ### 01 / Currently
 
@@ -32,7 +32,7 @@ to Forward Deployed Engineer work at technical product companies.
 | **Open to** | PM and APM roles, plus Forward Deployed Engineer roles |
 | **Ask me about** | directing Claude Code, shipping for real users at small scale, NASA L'SPACE, bilingual Korean and English product |
 
----
+<img src="assets/divider-dark.svg" alt="" width="100%">
 
 ### 02 / What I have shipped
 
@@ -45,8 +45,8 @@ scoped it, directed the build, and shipped it into production use.
 | [**En Hakkore Cafe**](https://cafe-website-flame-rho.vercel.app) | The cafe could only take orders in person, which meant long lines before Sunday service, so I shipped mobile ordering with pickup codes and a live barista queue. Around 20 orders a week. I gated the barista view behind a shared staff PIN to get it live, and that is the first thing I would replace with real role based auth. | React, Vite, Supabase, Vercel |
 | [**413 Youth Club**](https://github.com/DennisD0/Basketball-Camp-Website) | Coaches tracked attendance and payments in an Excel sheet they could not update from the court, so I built something they run from a phone during practice. Registration takes roughly 60% less time across 30+ members, though the real change is that coaches stopped doing paperwork at home after practice. | Next.js, Supabase, Prisma, Vercel |
 
-Client repos stay private where the work was paid, so those entries link to the live site
-instead.
+Some of this work stays partly closed. En Hakkore Cafe has a private repo so it links to the
+live app, and AutoBulletin runs for church staff so it links to the code instead.
 
 One more worth mentioning, less because anyone is using it and more because of what it took
 to get working. [**Choir Player**](https://github.com/DennisD0/Choir-Player)
@@ -57,7 +57,7 @@ hard, so the design serves verified scores first and only falls through to recog
 one does not exist yet, since accuracy mattered more than coverage. I wanted to know how
 far I could take a prototype when the hard part is not the interface.
 
----
+<img src="assets/divider-dark.svg" alt="" width="100%">
 
 ### 03 / How I work
 
@@ -91,7 +91,7 @@ far I could take a prototype when the hard part is not the interface.
 ![Figma](https://img.shields.io/badge/Figma-52525B?style=flat-square&logo=figma&logoColor=white)
 ![Linear](https://img.shields.io/badge/Linear-52525B?style=flat-square&logo=linear&logoColor=white)
 
----
+<img src="assets/divider-dark.svg" alt="" width="100%">
 
 <details>
 <summary><b>04 / Before this</b></summary>
@@ -127,7 +127,7 @@ and HackRPI.
 
 </details>
 
----
+<img src="assets/divider-dark.svg" alt="" width="100%">
 
 The through line is that I cold outreach for what I want and I do the unglamorous part.
 Sponsorships from cold emails, clients from cold calls, and configuration work nobody sees.

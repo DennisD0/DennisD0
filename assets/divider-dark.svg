@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="44" viewBox="0 0 1000 44" role="presentation">
+  <style>
+    .panel { fill: #050505; }
+    .base  { stroke: #26262A; stroke-width: 1; }
+    .sweep { animation: sweep 7s cubic-bezier(.45,0,.55,1) infinite; }
+    @keyframes sweep {
+      0%        { transform: translateX(-320px); }
+      55%, 100% { transform: translateX(1000px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sweep { animation: none; opacity: 0; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="glint" x1="0" x2="1">
+      <stop offset="0"   stop-color="#F4F3F1" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#F4F3F1" stop-opacity="0.55" />
+      <stop offset="1"   stop-color="#F4F3F1" stop-opacity="0" />
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="1000" height="44" rx="10" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect class="panel" width="1000" height="44" />
+    <line class="base" x1="40" y1="22" x2="960" y2="22" />
+    <rect class="sweep" x="0" y="21" width="320" height="1.5" fill="url(#glint)" />
+  </g>
+</svg>
