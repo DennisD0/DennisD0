@@ -5,20 +5,13 @@
     .name  { fill: #F4F3F1; font: 600 84px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: -2px; }
     .role  { fill: #D4D4D8; font: 400 26px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.2px; }
     .meta  { fill: #98979D; font: 400 15px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 3px; }
-    .tick  { fill: #6E6E76; font: 400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 1.8px; }
-    .slash { fill: #45454C; }
-    .rule  { stroke: #26262A; stroke-width: 1; }
   </style>
 
   <rect class="panel" width="1584" height="396" />
 
   <g text-anchor="end">
-    <text class="meta" x="1504" y="104">PRODUCT MANAGER AND BUILDER</text>
-    <text class="name" x="1504" y="200">Dennis Do</text>
-    <text class="role" x="1504" y="250">I direct AI agents to build and ship real product.</text>
-
-    <line class="rule" x1="700" y1="286" x2="1504" y2="286" />
-
-    <text class="tick" x="1504" y="320">MAVENSTUDIO <tspan class="slash">/</tspan> AUTOBULLETIN <tspan class="slash">/</tspan> 413 YOUTH CLUB <tspan class="slash">/</tspan> EN HAKKORE CAFE <tspan class="slash">/</tspan> SCOUT <tspan class="slash">/</tspan> NASA L'SPACE</text>
+    <text class="meta" x="1504" y="132">PRODUCT MANAGER AND BUILDER</text>
+    <text class="name" x="1504" y="228">Dennis Do</text>
+    <text class="role" x="1504" y="276">I direct AI agents to build and ship real product.</text>
   </g>
 </svg>
