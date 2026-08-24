@@ -21,12 +21,20 @@ const ROLES = `MAVENSTUDIO FOUNDER <tspan class="slash">/</tspan> AUTOBULLETIN <
 // Three rolls of the grid. The shader re-rolls every cell every 5s, so cycling
 // three frames on a 15s loop reproduces the shimmer without animating each cell.
 const FRAMES = [5, 6, 7];
+const BANDS = 16;
 
 function frameGroup(step, i) {
-  const layers = grid({ w: W, h: H, total: 20, dot: 3, step })
-    .map(l => `        <path d="${l.d}" opacity="${l.opacity}" />`)
+  const rings = grid({ w: W, h: H, total: 20, dot: 3, step, bands: BANDS })
+    .map(r => {
+      const paths = r.layers
+        .map(l => `          <path d="${l.d}" opacity="${l.opacity}" />`)
+        .join('\n');
+      // Reveal delay grows with distance from the centre, so the grid switches
+      // on in rings the way the shader's step(timing_offset, u_time) does.
+      return `        <g class="r" style="animation-delay:${(r.ring * 0.07).toFixed(2)}s">\n${paths}\n        </g>`;
+    })
     .join('\n');
-  return `      <g class="f f${i}">\n${layers}\n      </g>`;
+  return `      <g class="f f${i}">\n${rings}\n      </g>`;
 }
 
 function build(themeName) {
@@ -69,6 +77,15 @@ function build(themeName) {
       to   { transform: translateX(-1700px); }
     }
 
+    /* Rings switch on outward from the centre, with a brief overshoot on arrival
+       like the shader's clamp(..., 1.0, 1.25) flash. */
+    .r { opacity: 0; animation: reveal .75s ease-out forwards; }
+    @keyframes reveal {
+      0%   { opacity: 0; }
+      55%  { opacity: 1; }
+      100% { opacity: 0.82; }
+    }
+
     /* Hard cuts rather than cross fades, matching the shader's floor() quantised re-roll. */
     .f  { opacity: 0; animation: flip 15s step-end infinite; }
     .f0 { animation-delay:  0s; }
@@ -81,11 +98,12 @@ function build(themeName) {
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .rise, .draw, .pulse, .track, .f { animation: none; }
+      .rise, .draw, .pulse, .track, .f, .r { animation: none; }
       .rise { opacity: 1; }
       .draw { stroke-dashoffset: 0; }
       .pulse { opacity: .7; }
       .f0 { opacity: 1; }
+      .r  { opacity: 0.82; }
     }
   </style>
 

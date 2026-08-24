@@ -27,14 +27,23 @@ function shaderRandom(x, y) {
  * `step` stands in for the shader's floor(u_time / frequency + show_offset + frequency);
  * advancing it re-rolls every cell the way the live shader does every 5s.
  */
-function grid({ w, h, total = 20, dot = 3, step = 5 }) {
+function grid({ w, h, total = 20, dot = 3, step = 5, bands = 0 }) {
   // The shader centres the grid inside the viewport rather than starting flush.
   const offX = Math.abs(Math.floor((w % total - dot) * 0.5));
   const offY = Math.abs(Math.floor((h % total - dot) * 0.5));
 
   const cols = Math.ceil(w / total);
   const rows = Math.ceil(h / total);
-  const buckets = OPACITIES.map(() => []);
+
+  // Distance from the centre cell decides which reveal ring a cell belongs to,
+  // mirroring the shader's dist_from_center timing offset.
+  const midX = cols / 2, midY = rows / 2;
+  const maxDist = Math.hypot(midX, midY);
+  const ringOf = (cx, cy) =>
+    bands ? Math.min(bands - 1, Math.floor(Math.hypot(cx - midX, cy - midY) / maxDist * bands)) : 0;
+
+  // ring -> opacity -> path segments
+  const rings = new Map();
 
   for (let cx = 0; cx < cols; cx++) {
     for (let cy = 0; cy < rows; cy++) {
@@ -46,22 +55,26 @@ function grid({ w, h, total = 20, dot = 3, step = 5 }) {
       const x = cx * total + offX;
       const y = cy * total + offY;
       if (x > w || y > h) continue;
-      buckets[idx].push(`M${x} ${y}h${dot}v${dot}h-${dot}z`);
+
+      const ring = ringOf(cx, cy);
+      if (!rings.has(ring)) rings.set(ring, new Map());
+      const byOpacity = rings.get(ring);
+      const o = OPACITIES[idx];
+      if (!byOpacity.has(o)) byOpacity.set(o, []);
+      byOpacity.get(o).push(`M${x} ${y}h${dot}v${dot}h-${dot}z`);
     }
   }
 
-  // Collapse the 10 buckets into the 4 distinct opacity values they resolve to,
-  // so each frame is 4 paths instead of thousands of elements.
-  const byOpacity = new Map();
-  buckets.forEach((segs, i) => {
-    if (!segs.length) return;
-    const o = OPACITIES[i];
-    byOpacity.set(o, (byOpacity.get(o) || []).concat(segs));
-  });
-
-  return [...byOpacity.entries()]
+  // Collapse to a handful of paths rather than thousands of elements.
+  const toLayers = m => [...m.entries()]
     .sort((a, b) => a[0] - b[0])
     .map(([opacity, segs]) => ({ opacity, d: segs.join('') }));
+
+  if (!bands) return toLayers(rings.get(0) || new Map());
+
+  return [...rings.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([ring, m]) => ({ ring, layers: toLayers(m) }));
 }
 
 module.exports = { grid, OPACITIES };
