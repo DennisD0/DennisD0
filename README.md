@@ -40,7 +40,6 @@ scoped it, directed the build, and shipped it into production use.
 
 | Project | The problem, and what I did about it | Built with |
 |---|---|---|
-| [**Choir Player**](https://github.com/DennisD0/Choir-Player) &nbsp;·&nbsp; [live](https://choir-player-744338163103.us-east1.run.app) | A Korean church choir had hymnals only on paper, so I scoped a tool where you type a hymn number and get back a playable, transposable score. The hard call was serving verified scores first and falling through to optical recognition only when one did not exist yet, since accuracy mattered more than coverage. | Next.js, TypeScript, Audiveris, Docker, Cloud Run |
 | [**AutoBulletin**](https://github.com/DennisD0/JBCHNY-bulletin) &nbsp;·&nbsp; [live](https://jbchbulletin.duckdns.org) | Three staff spent four hours a week assembling a bilingual bulletin by hand in Word, so I scoped a multi user editor that gets it under fifteen minutes. Editor locking came out of watching them overwrite each other. 99% uptime since launch. | Next.js, Puppeteer, GitHub Actions, GCP |
 | [**En Hakkore Cafe**](https://cafe-website-flame-rho.vercel.app) | The cafe could only take orders in person, which meant long lines before Sunday service, so I shipped mobile ordering with pickup codes and a live barista queue. Around 20 orders a week. I gated the barista view behind a shared staff PIN to get it live, and that is the first thing I would replace with real role based auth. | React, Vite, Supabase, Vercel |
 | [**413 Youth Club**](https://github.com/DennisD0/Basketball-Camp-Website) | Coaches tracked attendance and payments in an Excel sheet they could not update from the court, so I built something they run from a phone during practice. Registration time down roughly 60%, serving 30+ members. | Next.js, Supabase, Prisma, Vercel |
@@ -48,6 +47,15 @@ scoped it, directed the build, and shipped it into production use.
 
 Client repos stay private where the work was paid, so those entries link to the live site
 instead.
+
+One more worth mentioning, less because anyone is using it and more because of what it took
+to get working. [**Choir Player**](https://github.com/DennisD0/Choir-Player)
+([live](https://choir-player-744338163103.us-east1.run.app)) turns a hymn number into a
+playable, transposable score, which means running optical music recognition on scanned
+sheet music inside a container that scales to zero. Recognition on messy scans is genuinely
+hard, so the design serves verified scores first and only falls through to recognition when
+one does not exist yet, since accuracy mattered more than coverage. I wanted to know how
+far I could take a prototype when the hard part is not the interface.
 
 ---
 
