@@ -1,14 +1,11 @@
 const fs = require('fs');
-const { field } = require('./gen-dots.js');
+const { grid } = require('./gen-dots.js');
 
 const W = 1584, H = 396;
 
-// Bolder than the README hero on purpose. LinkedIn recompresses the upload and
-// crushes anything faint, and the banner renders well under 1584px wide in feed.
-const dots = field({ w: W, h: H, count: 400, seed: 20260824, minR: 1.0, maxR: 2.5, minO: 0.16, maxO: 0.60 });
-
-const circles = dots
-  .map(d => `      <circle cx="${d.x}" cy="${d.y}" r="${d.r}" opacity="${d.o}" />`)
+// Static single frame. LinkedIn takes a flat PNG, so there is nothing to animate.
+const layers = grid({ w: W, h: H, total: 20, dot: 3, step: 5 })
+  .map(l => `      <path d="${l.d}" opacity="${l.opacity}" />`)
   .join('\n');
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Dennis Do, Product Manager and Builder. I direct AI agents to build and ship real product.">
@@ -23,21 +20,18 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 
   <defs>
     <filter id="soften" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="64" />
+      <feGaussianBlur stdDeviation="80" />
     </filter>
-
-    <!-- White keeps dots, the blurred black ellipse erases them, and the blur makes
-         that erasure fall off gradually instead of cutting a visible hole. -->
     <mask id="keepClear">
       <rect width="${W}" height="${H}" fill="#FFF" />
-      <ellipse cx="${W / 2}" cy="200" rx="300" ry="96" fill="#000" filter="url(#soften)" />
+      <ellipse cx="${W / 2}" cy="202" rx="430" ry="122" fill="#000" filter="url(#soften)" />
     </mask>
   </defs>
 
   <rect class="panel" width="${W}" height="${H}" />
 
-  <g class="dots" mask="url(#keepClear)">
-${circles}
+  <g class="dots" mask="url(#keepClear)" opacity="0.5">
+${layers}
   </g>
 
   <g text-anchor="middle">
@@ -50,4 +44,4 @@ ${circles}
 
 const out = process.argv[2];
 fs.writeFileSync(out, svg, 'utf8');
-console.log(`wrote ${out} with ${dots.length} dots`);
+console.log(`wrote ${out}`);
