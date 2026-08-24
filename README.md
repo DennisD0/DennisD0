@@ -1,6 +1,16 @@
-# Dennis Do
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
+  <img src="assets/header-dark.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product." width="100%">
+</picture>
 
-**Product Manager and Builder** &nbsp;·&nbsp; Queens, NYC
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/marquee-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/marquee-light.svg">
+  <img src="assets/marquee-dark.svg" alt="Roles: MavenStudio Founder, AutoBulletin, 413 Youth Club, En Hakkore Cafe, Scout Product Designer, NASA L'SPACE Project Manager, Research Foundation of CUNY" width="100%">
+</picture>
+
+# Dennis Do
 
 I direct AI coding agents, mostly Claude Code, to build and ship real product. Small
 organizations near me kept running on spreadsheets and paper because software built for
@@ -28,6 +38,7 @@ to Forward Deployed Engineer work at technical product companies.
 |---|---|
 | **Running** | MavenStudio, an AI powered web agency I founded with a software engineer partner |
 | **Pipeline** | Scrape Google Maps for small businesses with no website, cold call to confirm, then build and deliver |
+| **Based in** | Queens, NYC |
 | **Open to** | PM and APM roles, plus Forward Deployed Engineer roles |
 | **Ask me about** | directing Claude Code, shipping for real users at small scale, NASA L'SPACE, bilingual Korean and English product |
 
@@ -40,10 +51,9 @@ scoped it, directed the build, and shipped it into production use.
 
 | Project | The problem, and what I did about it | Built with |
 |---|---|---|
-| [**AutoBulletin**](https://github.com/DennisD0/JBCHNY-bulletin) &nbsp;·&nbsp; [live](https://jbchbulletin.duckdns.org) | Three staff spent four hours a week assembling a bilingual bulletin by hand in Word, so I scoped a multi user editor that gets it under fifteen minutes. Editor locking came out of watching them overwrite each other. 99% uptime since launch. | Next.js, Puppeteer, GitHub Actions, GCP |
+| [**AutoBulletin**](https://github.com/DennisD0/JBCHNY-bulletin) &nbsp;·&nbsp; [live](https://jbchbulletin.duckdns.org) | Three staff spent four hours a week assembling a bilingual bulletin by hand in Word, so I scoped a multi user editor that gets it under fifteen minutes. Editor locking came out of watching them overwrite each other. It has held 99% uptime since launch, and nobody there has opened Word for a bulletin since. | Next.js, Puppeteer, GitHub Actions, GCP |
 | [**En Hakkore Cafe**](https://cafe-website-flame-rho.vercel.app) | The cafe could only take orders in person, which meant long lines before Sunday service, so I shipped mobile ordering with pickup codes and a live barista queue. Around 20 orders a week. I gated the barista view behind a shared staff PIN to get it live, and that is the first thing I would replace with real role based auth. | React, Vite, Supabase, Vercel |
-| [**413 Youth Club**](https://github.com/DennisD0/Basketball-Camp-Website) | Coaches tracked attendance and payments in an Excel sheet they could not update from the court, so I built something they run from a phone during practice. Registration time down roughly 60%, serving 30+ members. | Next.js, Supabase, Prisma, Vercel |
-| **Voice Translator** | Live speech translation with no backend and no paid services, which kept it free to run and free to give away. | Web Speech API, Claude API |
+| [**413 Youth Club**](https://github.com/DennisD0/Basketball-Camp-Website) | Coaches tracked attendance and payments in an Excel sheet they could not update from the court, so I built something they run from a phone during practice. Registration takes roughly 60% less time across 30+ members, though the real change is that coaches stopped doing paperwork at home after practice. | Next.js, Supabase, Prisma, Vercel |
 
 Client repos stay private where the work was paid, so those entries link to the live site
 instead.

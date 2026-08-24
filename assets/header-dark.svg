@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-label="Dennis Do, Product Manager and Builder, Queens NYC">
+  <title>Dennis Do, Product Manager and Builder</title>
+  <style>
+    .bg   { fill: #050505; }
+    .name { fill: #F4F3F1; font: 600 62px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: -1.5px; }
+    .role { fill: #D4D4D8; font: 400 21px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.2px; }
+    .meta { fill: #98979D; font: 400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 2.4px; }
+    .rule { stroke: #52525B; stroke-width: 1; }
+    .dot  { fill: #F4F3F1; }
+
+    .rise { opacity: 0; animation: rise .9s cubic-bezier(.22,.61,.36,1) forwards; }
+    .d1 { animation-delay: .15s; }
+    .d2 { animation-delay: .35s; }
+    .d3 { animation-delay: .55s; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .draw {
+      stroke-dasharray: 920;
+      stroke-dashoffset: 920;
+      animation: draw 1.6s cubic-bezier(.22,.61,.36,1) .7s forwards;
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    .pulse { animation: pulse 2.6s ease-in-out 1.6s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: .25; }
+      50%      { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .draw, .pulse { animation: none; }
+      .rise  { opacity: 1; }
+      .draw  { stroke-dashoffset: 0; }
+      .pulse { opacity: .7; }
+    }
+  </style>
+
+  <rect class="bg" width="1000" height="260" />
+
+  <text class="meta rise d1" x="40" y="58">PRODUCT MANAGER AND BUILDER</text>
+  <text class="name rise d2" x="40" y="132">Dennis Do</text>
+  <text class="role rise d3" x="40" y="176">I direct AI agents to build and ship real product.</text>
+
+  <line class="rule draw" x1="40" y1="212" x2="960" y2="212" />
+
+  <circle class="dot pulse" cx="46" cy="230" r="3.5" />
+  <text class="meta rise d3" x="62" y="235">QUEENS, NYC</text>
+</svg>
