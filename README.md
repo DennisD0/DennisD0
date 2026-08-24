@@ -1,14 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img src="assets/header-dark.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product." width="100%">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/marquee-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/marquee-light.svg">
-  <img src="assets/marquee-dark.svg" alt="Roles: MavenStudio Founder, AutoBulletin, 413 Youth Club, En Hakkore Cafe, Scout Product Designer, NASA L'SPACE Project Manager, Research Foundation of CUNY" width="100%">
-</picture>
+<img src="assets/hero-dark.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product. Previously MavenStudio, AutoBulletin, 413 Youth Club, En Hakkore Cafe, Scout, NASA L'SPACE, and Research Foundation of CUNY." width="100%">
 
 # Dennis Do
 
