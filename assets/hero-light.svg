@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-label="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product.">
+  <title>Dennis Do, Product Manager and Builder</title>
+  <style>
+    .panel { fill: #FFFFFF; }
+    .dots  { fill: #0A0A0B; }
+    .name  { fill: #0A0A0B; font: 600 62px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: -1.5px; }
+    .role  { fill: #3F3F46; font: 400 21px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.2px; }
+    .meta  { fill: #71717A; font: 400 13px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 2.4px; }
+    .tick  { fill: #8E8E96; font: 400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 1.6px; }
+    .slash { fill: #C4C4CC; }
+    .rule  { stroke: #E4E4E7; stroke-width: 1; }
+    .dot   { fill: #0A0A0B; }
+
+    .rise { opacity: 0; animation: rise .9s cubic-bezier(.22,.61,.36,1) forwards; }
+    .d1 { animation-delay: .15s; }
+    .d2 { animation-delay: .35s; }
+    .d3 { animation-delay: .55s; }
+    .d4 { animation-delay: .75s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .draw { stroke-dasharray: 920; stroke-dashoffset: 920;
+            animation: draw 1.5s cubic-bezier(.22,.61,.36,1) .8s forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    .pulse { animation: pulse 2.6s ease-in-out 1.6s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+
+    .track { animation: scroll 38s linear infinite; }
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-1700px); }
+    }
+
+    /* Each dot breathes on its own clock, so the field never blinks in unison. */
+    .tw { animation-name: tw; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+    @keyframes tw {
+      0%, 100% { opacity: calc(var(--o) * 0.45); }
+      50%      { opacity: var(--o); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .draw, .pulse, .track, .tw { animation: none; }
+      .rise { opacity: 1; }
+      .draw { stroke-dashoffset: 0; }
+      .pulse { opacity: .7; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0"    stop-color="#fff" stop-opacity="0" />
+      <stop offset="0.05" stop-color="#fff" stop-opacity="1" />
+      <stop offset="0.95" stop-color="#fff" stop-opacity="1" />
+      <stop offset="1"    stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <mask id="edges">
+      <rect x="0" y="252" width="1000" height="68" fill="url(#fade)" />
+    </mask>
+
+    <!-- Dark centre hides dots behind the copy block on the left, so the text stays clean. -->
+    <radialGradient id="clear" cx="0.30" cy="0.42" r="0.72">
+      <stop offset="0"    stop-color="#000" />
+      <stop offset="0.40" stop-color="#000" />
+      <stop offset="0.75" stop-color="#909090" />
+      <stop offset="1"    stop-color="#FFF" />
+    </radialGradient>
+    <mask id="keepClear">
+      <rect width="1000" height="320" fill="url(#clear)" />
+    </mask>
+
+    <clipPath id="panelClip">
+      <rect width="1000" height="320" rx="16" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#panelClip)">
+    <rect class="panel" width="1000" height="320" />
+
+    <g class="dots" mask="url(#keepClear)">
+      <circle class="tw" cx="407.7" cy="127" r="0.98" opacity="0.143" style="--o:0.143;animation-duration:5.9s;animation-delay:0.2s" />
+      <circle class="tw" cx="255.7" cy="233.5" r="0.78" opacity="0.184" style="--o:0.184;animation-duration:6.9s;animation-delay:6.1s" />
+      <circle class="tw" cx="56.7" cy="218" r="1.29" opacity="0.115" style="--o:0.115;animation-duration:6.5s;animation-delay:0.6s" />
+      <circle class="tw" cx="31.4" cy="270.4" r="1.63" opacity="0.119" style="--o:0.119;animation-duration:4.7s;animation-delay:4s" />
+      <circle class="tw" cx="500.1" cy="174.2" r="1.14" opacity="0.061" style="--o:0.061;animation-duration:7s;animation-delay:5.2s" />
+      <circle class="tw" cx="901.6" cy="93.1" r="0.91" opacity="0.139" style="--o:0.139;animation-duration:6.2s;animation-delay:8.3s" />
+      <circle class="tw" cx="811.7" cy="168.1" r="1.75" opacity="0.171" style="--o:0.171;animation-duration:5.1s;animation-delay:7.1s" />
+      <circle class="tw" cx="548" cy="41.5" r="0.79" opacity="0.114" style="--o:0.114;animation-duration:6.8s;animation-delay:2.6s" />
+      <circle class="tw" cx="951.2" cy="224" r="0.9" opacity="0.136" style="--o:0.136;animation-duration:10s;animation-delay:2.7s" />
+      <circle class="tw" cx="128.3" cy="71.4" r="1.41" opacity="0.064" style="--o:0.064;animation-duration:7.5s;animation-delay:3s" />
+      <circle class="tw" cx="163.6" cy="277.7" r="1.55" opacity="0.191" style="--o:0.191;animation-duration:9.8s;animation-delay:5.3s" />
+      <circle class="tw" cx="404.4" cy="107.6" r="1.73" opacity="0.06" style="--o:0.06;animation-duration:10.8s;animation-delay:7s" />
+      <circle class="tw" cx="336.5" cy="98.9" r="1.22" opacity="0.065" style="--o:0.065;animation-duration:6.5s;animation-delay:5.2s" />
+      <circle class="tw" cx="159.6" cy="255.8" r="1.37" opacity="0.159" style="--o:0.159;animation-duration:6.4s;animation-delay:1.5s" />
+      <circle class="tw" cx="520.5" cy="217.5" r="1.17" opacity="0.174" style="--o:0.174;animation-duration:7.5s;animation-delay:2.9s" />
+      <circle class="tw" cx="274" cy="220.3" r="0.81" opacity="0.127" style="--o:0.127;animation-duration:8.6s;animation-delay:7.8s" />
+      <circle class="tw" cx="380.5" cy="225.7" r="0.85" opacity="0.111" style="--o:0.111;animation-duration:6.9s;animation-delay:5.9s" />
+      <circle class="tw" cx="619.9" cy="263.3" r="1.26" opacity="0.141" style="--o:0.141;animation-duration:4.9s;animation-delay:7.2s" />
+      <circle class="tw" cx="499" cy="283.9" r="1.56" opacity="0.071" style="--o:0.071;animation-duration:9.9s;animation-delay:1.8s" />
+      <circle class="tw" cx="684.1" cy="137.9" r="0.72" opacity="0.142" style="--o:0.142;animation-duration:11s;animation-delay:5.2s" />
+      <circle class="tw" cx="494.5" cy="86.9" r="1.75" opacity="0.143" style="--o:0.143;animation-duration:4.8s;animation-delay:4.3s" />
+      <circle class="tw" cx="586.9" cy="114.3" r="0.75" opacity="0.116" style="--o:0.116;animation-duration:9.9s;animation-delay:1s" />
+      <circle class="tw" cx="778.3" cy="239.1" r="0.88" opacity="0.197" style="--o:0.197;animation-duration:5.7s;animation-delay:3s" />
+      <circle class="tw" cx="702.9" cy="87.4" r="1.79" opacity="0.172" style="--o:0.172;animation-duration:8.3s;animation-delay:2.7s" />
+      <circle class="tw" cx="350.7" cy="79.4" r="1.11" opacity="0.088" style="--o:0.088;animation-duration:8.1s;animation-delay:7.2s" />
+      <circle class="tw" cx="31.9" cy="139.3" r="0.91" opacity="0.179" style="--o:0.179;animation-duration:7.9s;animation-delay:2.7s" />
+      <circle class="tw" cx="374.4" cy="288.4" r="1.66" opacity="0.145" style="--o:0.145;animation-duration:9.8s;animation-delay:3.7s" />
+      <circle class="tw" cx="476.9" cy="34.2" r="1.2" opacity="0.179" style="--o:0.179;animation-duration:5.4s;animation-delay:4.4s" />
+      <circle class="tw" cx="383.6" cy="262.5" r="1.17" opacity="0.096" style="--o:0.096;animation-duration:10.7s;animation-delay:8.6s" />
+      <circle class="tw" cx="630.3" cy="55.9" r="1.31" opacity="0.071" style="--o:0.071;animation-duration:8.6s;animation-delay:2.5s" />
+      <circle class="tw" cx="537.9" cy="292.8" r="0.87" opacity="0.187" style="--o:0.187;animation-duration:6.9s;animation-delay:2.3s" />
+      <circle class="tw" cx="453.5" cy="151.4" r="0.78" opacity="0.081" style="--o:0.081;animation-duration:8.8s;animation-delay:3.8s" />
+      <circle class="tw" cx="899.8" cy="298.2" r="1.45" opacity="0.143" style="--o:0.143;animation-duration:9s;animation-delay:2.5s" />
+      <circle class="tw" cx="412.5" cy="150.9" r="1.72" opacity="0.085" style="--o:0.085;animation-duration:5.3s;animation-delay:7.5s" />
+      <circle class="tw" cx="758.4" cy="179.9" r="0.72" opacity="0.169" style="--o:0.169;animation-duration:8s;animation-delay:6.4s" />
+      <circle class="tw" cx="711.2" cy="159.1" r="0.72" opacity="0.193" style="--o:0.193;animation-duration:9.5s;animation-delay:7.9s" />
+      <circle class="tw" cx="109.4" cy="103" r="1.11" opacity="0.085" style="--o:0.085;animation-duration:6s;animation-delay:8.7s" />
+      <circle class="tw" cx="174.3" cy="239" r="1.47" opacity="0.15" style="--o:0.15;animation-duration:10s;animation-delay:8.3s" />
+      <circle class="tw" cx="857.3" cy="130.9" r="1.52" opacity="0.161" style="--o:0.161;animation-duration:5.6s;animation-delay:1.3s" />
+      <circle class="tw" cx="391" cy="307.8" r="1.04" opacity="0.159" style="--o:0.159;animation-duration:8.6s;animation-delay:0s" />
+      <circle class="tw" cx="36.1" cy="284.2" r="1.13" opacity="0.165" style="--o:0.165;animation-duration:4.8s;animation-delay:5.3s" />
+      <circle class="tw" cx="237.6" cy="304.3" r="1.04" opacity="0.141" style="--o:0.141;animation-duration:6.5s;animation-delay:0.8s" />
+      <circle class="tw" cx="499.7" cy="61.7" r="1.59" opacity="0.167" style="--o:0.167;animation-duration:4.8s;animation-delay:0.8s" />
+      <circle class="tw" cx="690.1" cy="236.5" r="1.15" opacity="0.111" style="--o:0.111;animation-duration:5.3s;animation-delay:8.1s" />
+      <circle class="tw" cx="512.8" cy="167.1" r="1.22" opacity="0.132" style="--o:0.132;animation-duration:10.1s;animation-delay:5.4s" />
+      <circle class="tw" cx="375.9" cy="204.7" r="0.76" opacity="0.122" style="--o:0.122;animation-duration:10.3s;animation-delay:3.6s" />
+      <circle class="tw" cx="161.2" cy="245.9" r="1.63" opacity="0.082" style="--o:0.082;animation-duration:8.6s;animation-delay:0.5s" />
+      <circle class="tw" cx="334.3" cy="217.7" r="1.56" opacity="0.085" style="--o:0.085;animation-duration:8.9s;animation-delay:0.1s" />
+      <circle class="tw" cx="380.5" cy="1.3" r="0.98" opacity="0.139" style="--o:0.139;animation-duration:4.1s;animation-delay:5.8s" />
+      <circle class="tw" cx="473" cy="160.5" r="1.71" opacity="0.123" style="--o:0.123;animation-duration:9.7s;animation-delay:2.6s" />
+      <circle class="tw" cx="713.7" cy="19.3" r="1.66" opacity="0.13" style="--o:0.13;animation-duration:6.5s;animation-delay:2.9s" />
+      <circle class="tw" cx="715.6" cy="209.3" r="1.77" opacity="0.062" style="--o:0.062;animation-duration:9.4s;animation-delay:4.1s" />
+      <circle class="tw" cx="173.9" cy="84.8" r="1.8" opacity="0.086" style="--o:0.086;animation-duration:4.3s;animation-delay:7s" />
+      <circle class="tw" cx="996.6" cy="231.4" r="1.24" opacity="0.183" style="--o:0.183;animation-duration:7.9s;animation-delay:5.9s" />
+      <circle class="tw" cx="172.9" cy="294.3" r="0.79" opacity="0.071" style="--o:0.071;animation-duration:4.7s;animation-delay:7.9s" />
+      <circle class="tw" cx="833.2" cy="308.1" r="1.1" opacity="0.134" style="--o:0.134;animation-duration:6.4s;animation-delay:6.9s" />
+      <circle class="tw" cx="512.9" cy="319.7" r="1.19" opacity="0.123" style="--o:0.123;animation-duration:7.1s;animation-delay:9s" />
+      <circle class="tw" cx="34.2" cy="211.4" r="0.76" opacity="0.172" style="--o:0.172;animation-duration:7.6s;animation-delay:8.2s" />
+      <circle class="tw" cx="334" cy="285.3" r="1.13" opacity="0.134" style="--o:0.134;animation-duration:4.6s;animation-delay:8.3s" />
+      <circle class="tw" cx="86.9" cy="183.2" r="0.93" opacity="0.133" style="--o:0.133;animation-duration:4.4s;animation-delay:0.1s" />
+      <circle class="tw" cx="668.8" cy="132" r="1.3" opacity="0.063" style="--o:0.063;animation-duration:5.8s;animation-delay:6.6s" />
+      <circle class="tw" cx="248.8" cy="153.5" r="0.8" opacity="0.094" style="--o:0.094;animation-duration:9.4s;animation-delay:4.9s" />
+      <circle class="tw" cx="319.7" cy="220.2" r="1.38" opacity="0.155" style="--o:0.155;animation-duration:4.1s;animation-delay:2.8s" />
+      <circle class="tw" cx="401.4" cy="63.2" r="1.01" opacity="0.187" style="--o:0.187;animation-duration:7.7s;animation-delay:4.8s" />
+      <circle class="tw" cx="597.5" cy="54.4" r="1.03" opacity="0.198" style="--o:0.198;animation-duration:7.3s;animation-delay:6.3s" />
+      <circle class="tw" cx="916.1" cy="236.9" r="1.74" opacity="0.099" style="--o:0.099;animation-duration:10.9s;animation-delay:0s" />
+      <circle class="tw" cx="806.9" cy="140" r="1.31" opacity="0.117" style="--o:0.117;animation-duration:7.5s;animation-delay:5.7s" />
+      <circle class="tw" cx="701.3" cy="191.2" r="1.65" opacity="0.14" style="--o:0.14;animation-duration:7.4s;animation-delay:4s" />
+      <circle class="tw" cx="215.8" cy="48.2" r="1.66" opacity="0.078" style="--o:0.078;animation-duration:9.7s;animation-delay:7.8s" />
+      <circle class="tw" cx="184.1" cy="163.9" r="0.72" opacity="0.187" style="--o:0.187;animation-duration:4.2s;animation-delay:1.7s" />
+      <circle class="tw" cx="444.5" cy="80" r="1.33" opacity="0.062" style="--o:0.062;animation-duration:10.5s;animation-delay:0.5s" />
+      <circle class="tw" cx="961.7" cy="237.2" r="1.1" opacity="0.076" style="--o:0.076;animation-duration:10.3s;animation-delay:3.8s" />
+      <circle class="tw" cx="911.2" cy="294.9" r="1.34" opacity="0.153" style="--o:0.153;animation-duration:8s;animation-delay:2.8s" />
+      <circle class="tw" cx="507" cy="201.1" r="1.43" opacity="0.156" style="--o:0.156;animation-duration:9s;animation-delay:1.5s" />
+      <circle class="tw" cx="225.8" cy="297.2" r="0.98" opacity="0.187" style="--o:0.187;animation-duration:5.1s;animation-delay:7.2s" />
+      <circle class="tw" cx="133.3" cy="6.9" r="1.45" opacity="0.101" style="--o:0.101;animation-duration:4s;animation-delay:5.3s" />
+      <circle class="tw" cx="381.4" cy="52.2" r="1.36" opacity="0.154" style="--o:0.154;animation-duration:8s;animation-delay:1.8s" />
+      <circle class="tw" cx="370.8" cy="245.2" r="0.95" opacity="0.076" style="--o:0.076;animation-duration:4.2s;animation-delay:7.8s" />
+      <circle class="tw" cx="869.1" cy="61.4" r="1.72" opacity="0.149" style="--o:0.149;animation-duration:4.3s;animation-delay:5.7s" />
+      <circle class="tw" cx="656.7" cy="244.1" r="0.74" opacity="0.18" style="--o:0.18;animation-duration:4.7s;animation-delay:4s" />
+      <circle class="tw" cx="644.3" cy="135.4" r="1.09" opacity="0.099" style="--o:0.099;animation-duration:5.6s;animation-delay:4.7s" />
+      <circle class="tw" cx="761.9" cy="32.2" r="1.46" opacity="0.15" style="--o:0.15;animation-duration:4.5s;animation-delay:5.9s" />
+      <circle class="tw" cx="225.6" cy="260.4" r="1.45" opacity="0.069" style="--o:0.069;animation-duration:6.5s;animation-delay:1.2s" />
+      <circle class="tw" cx="934.2" cy="201.1" r="0.9" opacity="0.178" style="--o:0.178;animation-duration:4.5s;animation-delay:1.4s" />
+      <circle class="tw" cx="110.8" cy="22.5" r="1.68" opacity="0.179" style="--o:0.179;animation-duration:4.2s;animation-delay:4.9s" />
+      <circle class="tw" cx="473.4" cy="147.1" r="1.71" opacity="0.132" style="--o:0.132;animation-duration:6.5s;animation-delay:6s" />
+      <circle class="tw" cx="94.5" cy="218.5" r="0.92" opacity="0.109" style="--o:0.109;animation-duration:6.2s;animation-delay:8.9s" />
+      <circle class="tw" cx="901.6" cy="171.7" r="1.31" opacity="0.122" style="--o:0.122;animation-duration:6.6s;animation-delay:4.2s" />
+      <circle class="tw" cx="47.9" cy="174.6" r="1.01" opacity="0.161" style="--o:0.161;animation-duration:4.6s;animation-delay:5.4s" />
+      <circle class="tw" cx="595.3" cy="50.5" r="1.69" opacity="0.187" style="--o:0.187;animation-duration:5.1s;animation-delay:0.4s" />
+      <circle class="tw" cx="79.9" cy="314.8" r="1.76" opacity="0.189" style="--o:0.189;animation-duration:9.5s;animation-delay:8.2s" />
+      <circle class="tw" cx="415.1" cy="254.8" r="0.75" opacity="0.184" style="--o:0.184;animation-duration:6.5s;animation-delay:1.4s" />
+      <circle class="tw" cx="505.6" cy="254.4" r="1.29" opacity="0.128" style="--o:0.128;animation-duration:9.1s;animation-delay:8.5s" />
+      <circle class="tw" cx="381.5" cy="94.7" r="0.8" opacity="0.179" style="--o:0.179;animation-duration:9.4s;animation-delay:6.6s" />
+      <circle class="tw" cx="940" cy="167.8" r="1.78" opacity="0.102" style="--o:0.102;animation-duration:5.2s;animation-delay:4.9s" />
+      <circle class="tw" cx="485" cy="82.7" r="1.53" opacity="0.102" style="--o:0.102;animation-duration:8.7s;animation-delay:8.6s" />
+      <circle class="tw" cx="692.4" cy="261.4" r="1.77" opacity="0.169" style="--o:0.169;animation-duration:6.1s;animation-delay:7.1s" />
+      <circle class="tw" cx="948.4" cy="142.2" r="1.22" opacity="0.189" style="--o:0.189;animation-duration:9s;animation-delay:6s" />
+      <circle class="tw" cx="708" cy="47.1" r="1.76" opacity="0.161" style="--o:0.161;animation-duration:8.5s;animation-delay:8s" />
+      <circle class="tw" cx="855.1" cy="183.5" r="0.78" opacity="0.183" style="--o:0.183;animation-duration:9.6s;animation-delay:6s" />
+      <circle class="tw" cx="341.3" cy="62.6" r="1.1" opacity="0.098" style="--o:0.098;animation-duration:10.4s;animation-delay:5.8s" />
+      <circle class="tw" cx="372.5" cy="254.8" r="0.95" opacity="0.167" style="--o:0.167;animation-duration:8.6s;animation-delay:1s" />
+      <circle class="tw" cx="614.7" cy="225.1" r="1.73" opacity="0.151" style="--o:0.151;animation-duration:6.5s;animation-delay:3.7s" />
+      <circle class="tw" cx="268.6" cy="311" r="1.71" opacity="0.073" style="--o:0.073;animation-duration:8.7s;animation-delay:4.3s" />
+      <circle class="tw" cx="875.9" cy="74.7" r="1.15" opacity="0.14" style="--o:0.14;animation-duration:9.6s;animation-delay:7s" />
+      <circle class="tw" cx="598.4" cy="246.1" r="1.33" opacity="0.092" style="--o:0.092;animation-duration:9.2s;animation-delay:0.2s" />
+      <circle class="tw" cx="197.1" cy="121.2" r="1.13" opacity="0.166" style="--o:0.166;animation-duration:10.2s;animation-delay:2s" />
+      <circle class="tw" cx="22.1" cy="218.3" r="0.76" opacity="0.184" style="--o:0.184;animation-duration:7.5s;animation-delay:5.4s" />
+      <circle class="tw" cx="463.5" cy="82.1" r="1.45" opacity="0.108" style="--o:0.108;animation-duration:6.8s;animation-delay:1.7s" />
+      <circle class="tw" cx="402.5" cy="28.8" r="1.38" opacity="0.068" style="--o:0.068;animation-duration:7.6s;animation-delay:2.7s" />
+      <circle class="tw" cx="254.5" cy="222" r="1.21" opacity="0.151" style="--o:0.151;animation-duration:5.1s;animation-delay:5.6s" />
+      <circle class="tw" cx="305.5" cy="117.9" r="1.18" opacity="0.1" style="--o:0.1;animation-duration:7.1s;animation-delay:0.9s" />
+      <circle class="tw" cx="482.6" cy="294.1" r="1.18" opacity="0.106" style="--o:0.106;animation-duration:5.7s;animation-delay:0.5s" />
+      <circle class="tw" cx="907.9" cy="55.8" r="1.16" opacity="0.143" style="--o:0.143;animation-duration:6.5s;animation-delay:0.3s" />
+      <circle class="tw" cx="318.9" cy="2.9" r="1.65" opacity="0.117" style="--o:0.117;animation-duration:10.5s;animation-delay:1.4s" />
+      <circle class="tw" cx="976.7" cy="26" r="0.97" opacity="0.192" style="--o:0.192;animation-duration:6.5s;animation-delay:4.1s" />
+      <circle class="tw" cx="826.4" cy="156.8" r="0.75" opacity="0.074" style="--o:0.074;animation-duration:9.8s;animation-delay:1.5s" />
+      <circle class="tw" cx="941.4" cy="274.6" r="1.34" opacity="0.118" style="--o:0.118;animation-duration:8.4s;animation-delay:4s" />
+      <circle class="tw" cx="386.2" cy="157.5" r="1.02" opacity="0.139" style="--o:0.139;animation-duration:5.4s;animation-delay:0.5s" />
+      <circle class="tw" cx="520" cy="191.9" r="1" opacity="0.069" style="--o:0.069;animation-duration:9.2s;animation-delay:5s" />
+      <circle class="tw" cx="354.9" cy="140.2" r="1.35" opacity="0.193" style="--o:0.193;animation-duration:4.9s;animation-delay:8.9s" />
+      <circle class="tw" cx="528.8" cy="116.4" r="0.94" opacity="0.075" style="--o:0.075;animation-duration:7.1s;animation-delay:4.3s" />
+      <circle class="tw" cx="732" cy="39.2" r="1.37" opacity="0.092" style="--o:0.092;animation-duration:8.7s;animation-delay:3.2s" />
+      <circle class="tw" cx="562.8" cy="150.9" r="0.81" opacity="0.072" style="--o:0.072;animation-duration:8.7s;animation-delay:0.7s" />
+      <circle class="tw" cx="826.5" cy="146.9" r="1.27" opacity="0.151" style="--o:0.151;animation-duration:6.4s;animation-delay:7.7s" />
+      <circle class="tw" cx="623.9" cy="13.7" r="1.41" opacity="0.103" style="--o:0.103;animation-duration:8.8s;animation-delay:6.8s" />
+      <circle class="tw" cx="386.2" cy="253.4" r="1.34" opacity="0.075" style="--o:0.075;animation-duration:5.9s;animation-delay:5.4s" />
+      <circle class="tw" cx="479.9" cy="237.6" r="1.79" opacity="0.07" style="--o:0.07;animation-duration:6.4s;animation-delay:3.5s" />
+      <circle class="tw" cx="39.4" cy="246.4" r="1.28" opacity="0.14" style="--o:0.14;animation-duration:10s;animation-delay:5.5s" />
+      <circle class="tw" cx="597.6" cy="85.8" r="1.61" opacity="0.145" style="--o:0.145;animation-duration:9.4s;animation-delay:4.3s" />
+      <circle class="tw" cx="683.2" cy="120.1" r="0.95" opacity="0.143" style="--o:0.143;animation-duration:10.6s;animation-delay:7.9s" />
+      <circle class="tw" cx="949.1" cy="202.5" r="0.85" opacity="0.067" style="--o:0.067;animation-duration:6.7s;animation-delay:3.7s" />
+      <circle class="tw" cx="305.1" cy="244.3" r="1.71" opacity="0.148" style="--o:0.148;animation-duration:4.6s;animation-delay:3.7s" />
+      <circle class="tw" cx="906.8" cy="263.7" r="1.46" opacity="0.189" style="--o:0.189;animation-duration:10.5s;animation-delay:3.8s" />
+      <circle class="tw" cx="198.3" cy="91.7" r="1.58" opacity="0.107" style="--o:0.107;animation-duration:8.4s;animation-delay:5.2s" />
+      <circle class="tw" cx="6.6" cy="157" r="0.72" opacity="0.077" style="--o:0.077;animation-duration:7.2s;animation-delay:1.2s" />
+      <circle class="tw" cx="910.2" cy="65.8" r="0.73" opacity="0.07" style="--o:0.07;animation-duration:8.8s;animation-delay:4.7s" />
+      <circle class="tw" cx="862.7" cy="193.7" r="1.39" opacity="0.071" style="--o:0.071;animation-duration:9s;animation-delay:1.4s" />
+      <circle class="tw" cx="774.7" cy="308.8" r="1.46" opacity="0.095" style="--o:0.095;animation-duration:6.7s;animation-delay:8.3s" />
+      <circle class="tw" cx="686.6" cy="194.8" r="1.18" opacity="0.136" style="--o:0.136;animation-duration:6.3s;animation-delay:0.7s" />
+      <circle class="tw" cx="702.7" cy="27.5" r="0.85" opacity="0.151" style="--o:0.151;animation-duration:6.9s;animation-delay:1.3s" />
+      <circle class="tw" cx="21.5" cy="124.5" r="0.74" opacity="0.168" style="--o:0.168;animation-duration:6s;animation-delay:1.5s" />
+      <circle class="tw" cx="899.2" cy="274.6" r="1.09" opacity="0.133" style="--o:0.133;animation-duration:8.7s;animation-delay:1.2s" />
+      <circle class="tw" cx="782" cy="220.3" r="0.93" opacity="0.076" style="--o:0.076;animation-duration:8.6s;animation-delay:6.3s" />
+      <circle class="tw" cx="784.7" cy="58.7" r="1.55" opacity="0.115" style="--o:0.115;animation-duration:9.9s;animation-delay:2.4s" />
+      <circle class="tw" cx="207.1" cy="265.6" r="1.68" opacity="0.174" style="--o:0.174;animation-duration:10.2s;animation-delay:0.3s" />
+      <circle class="tw" cx="113.9" cy="239.1" r="1.24" opacity="0.071" style="--o:0.071;animation-duration:10.3s;animation-delay:2.2s" />
+      <circle class="tw" cx="445.1" cy="221.3" r="1.38" opacity="0.172" style="--o:0.172;animation-duration:7.3s;animation-delay:4.1s" />
+      <circle class="tw" cx="864.6" cy="22.5" r="1.01" opacity="0.118" style="--o:0.118;animation-duration:8.8s;animation-delay:8s" />
+      <circle class="tw" cx="387.1" cy="162.8" r="1.08" opacity="0.128" style="--o:0.128;animation-duration:10.3s;animation-delay:6.7s" />
+    </g>
+
+    <text class="meta rise d1" x="48" y="58">PRODUCT MANAGER AND BUILDER</text>
+    <text class="name rise d2" x="48" y="132">Dennis Do</text>
+    <text class="role rise d3" x="48" y="176">I direct AI agents to build and ship real product.</text>
+
+    <circle class="dot pulse" cx="53" cy="204" r="3.5" />
+    <text class="meta rise d4" x="68" y="209">QUEENS, NYC</text>
+
+    <line class="rule draw" x1="48" y1="252" x2="952" y2="252" />
+
+    <g mask="url(#edges)">
+      <g class="track">
+        <text class="tick" x="48" y="292" textLength="1700" lengthAdjust="spacing">MAVENSTUDIO FOUNDER <tspan class="slash">/</tspan> AUTOBULLETIN <tspan class="slash">/</tspan> 413 YOUTH CLUB <tspan class="slash">/</tspan> EN HAKKORE CAFE <tspan class="slash">/</tspan> SCOUT PRODUCT DESIGNER <tspan class="slash">/</tspan> NASA L'SPACE PROJECT MANAGER <tspan class="slash">/</tspan> RESEARCH FOUNDATION OF CUNY <tspan class="slash">/</tspan></text>
+        <text class="tick" x="1748" y="292" textLength="1700" lengthAdjust="spacing">MAVENSTUDIO FOUNDER <tspan class="slash">/</tspan> AUTOBULLETIN <tspan class="slash">/</tspan> 413 YOUTH CLUB <tspan class="slash">/</tspan> EN HAKKORE CAFE <tspan class="slash">/</tspan> SCOUT PRODUCT DESIGNER <tspan class="slash">/</tspan> NASA L'SPACE PROJECT MANAGER <tspan class="slash">/</tspan> RESEARCH FOUNDATION OF CUNY <tspan class="slash">/</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

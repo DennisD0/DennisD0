@@ -1,4 +1,7 @@
-<img src="assets/hero-dark.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product. Previously MavenStudio, AutoBulletin, 413 Youth Club, En Hakkore Cafe, Scout, NASA L'SPACE, and Research Foundation of CUNY." width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+  <img src="assets/hero-light.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product. Previously MavenStudio, AutoBulletin, 413 Youth Club, En Hakkore Cafe, Scout, NASA L'SPACE, and Research Foundation of CUNY." width="100%">
+</picture>
 
 # Dennis Do
 
@@ -20,7 +23,7 @@ to Forward Deployed Engineer work at technical product companies.
 [![Email](https://img.shields.io/badge/Email-dennisnasa%40gmail.com-52525B?style=flat-square&labelColor=52525B)](mailto:dennisnasa@gmail.com)
 [![Resume](https://img.shields.io/badge/Resume-PDF-52525B?style=flat-square&labelColor=52525B)](https://personal-portfolio-bice-pi.vercel.app/dennis-do-resume.pdf)
 
-<img src="assets/divider-dark.svg" alt="" width="100%">
+---
 
 ### 01 / Currently
 
@@ -32,7 +35,7 @@ to Forward Deployed Engineer work at technical product companies.
 | **Open to** | PM and APM roles, plus Forward Deployed Engineer roles |
 | **Ask me about** | directing Claude Code, shipping for real users at small scale, NASA L'SPACE, bilingual Korean and English product |
 
-<img src="assets/divider-dark.svg" alt="" width="100%">
+---
 
 ### 02 / What I have shipped
 
@@ -57,7 +60,7 @@ hard, so the design serves verified scores first and only falls through to recog
 one does not exist yet, since accuracy mattered more than coverage. I wanted to know how
 far I could take a prototype when the hard part is not the interface.
 
-<img src="assets/divider-dark.svg" alt="" width="100%">
+---
 
 ### 03 / How I work
 
@@ -91,7 +94,7 @@ far I could take a prototype when the hard part is not the interface.
 ![Figma](https://img.shields.io/badge/Figma-52525B?style=flat-square&logo=figma&logoColor=white)
 ![Linear](https://img.shields.io/badge/Linear-52525B?style=flat-square&logo=linear&logoColor=white)
 
-<img src="assets/divider-dark.svg" alt="" width="100%">
+---
 
 <details>
 <summary><b>04 / Before this</b></summary>
@@ -127,7 +130,7 @@ and HackRPI.
 
 </details>
 
-<img src="assets/divider-dark.svg" alt="" width="100%">
+---
 
 The through line is that I cold outreach for what I want and I do the unglamorous part.
 Sponsorships from cold emails, clients from cold calls, and configuration work nobody sees.
