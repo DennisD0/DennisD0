@@ -1,22 +1,20 @@
 const fs = require('fs');
 const { grid } = require('./gen-dots.js');
 
-const W = 1000, H = 320;
+const W = 1000, H = 300;
 
 const THEMES = {
   light: {
     panel: '#FFFFFF', name: '#0A0A0B', role: '#3F3F46', meta: '#71717A',
-    tick: '#8E8E96', slash: '#C4C4CC', rule: '#E4E4E7',
+    rule: '#E4E4E7',
     dot: '#0A0A0B', dotLayer: 0.34,
   },
   dark: {
     panel: '#050505', name: '#F4F3F1', role: '#D4D4D8', meta: '#98979D',
-    tick: '#7A7A82', slash: '#4A4A52', rule: '#26262A',
+    rule: '#26262A',
     dot: '#F4F3F1', dotLayer: 0.5,
   },
 };
-
-const ROLES = `MAVENSTUDIO FOUNDER <tspan class="slash">/</tspan> AUTOBULLETIN <tspan class="slash">/</tspan> 413 YOUTH CLUB <tspan class="slash">/</tspan> EN HAKKORE CAFE <tspan class="slash">/</tspan> SCOUT PRODUCT DESIGNER <tspan class="slash">/</tspan> NASA L'SPACE PROJECT MANAGER <tspan class="slash">/</tspan> RESEARCH FOUNDATION OF CUNY <tspan class="slash">/</tspan>`;
 
 // Three rolls of the grid. The shader re-rolls every cell every 5s, so cycling
 // three frames on a 15s loop reproduces the shimmer without animating each cell.
@@ -49,8 +47,6 @@ function build(themeName) {
     .name  { fill: ${t.name}; font: 600 62px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: -1.5px; }
     .role  { fill: ${t.role}; font: 400 21px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0.2px; }
     .meta  { fill: ${t.meta}; font: 400 13px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 2.4px; }
-    .tick  { fill: ${t.tick}; font: 400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 1.6px; }
-    .slash { fill: ${t.slash}; }
     .rule  { stroke: ${t.rule}; stroke-width: 1; }
     .dot   { fill: ${t.name}; }
 
@@ -70,12 +66,6 @@ function build(themeName) {
 
     .pulse { animation: pulse 2.6s ease-in-out 1.6s infinite; }
     @keyframes pulse { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
-
-    .track { animation: scroll 38s linear infinite; }
-    @keyframes scroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-1700px); }
-    }
 
     /* Rings switch on outward from the centre, with a brief overshoot on arrival
        like the shader's clamp(..., 1.0, 1.25) flash. */
@@ -98,7 +88,7 @@ function build(themeName) {
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .rise, .draw, .pulse, .track, .f, .r { animation: none; }
+      .rise, .draw, .pulse, .f, .r { animation: none; }
       .rise { opacity: 1; }
       .draw { stroke-dashoffset: 0; }
       .pulse { opacity: .7; }
@@ -108,20 +98,10 @@ function build(themeName) {
   </style>
 
   <defs>
-    <linearGradient id="fade" x1="0" x2="1">
-      <stop offset="0"    stop-color="#fff" stop-opacity="0" />
-      <stop offset="0.05" stop-color="#fff" stop-opacity="1" />
-      <stop offset="0.95" stop-color="#fff" stop-opacity="1" />
-      <stop offset="1"    stop-color="#fff" stop-opacity="0" />
-    </linearGradient>
-    <mask id="edges">
-      <rect x="0" y="252" width="${W}" height="68" fill="url(#fade)" />
-    </mask>
-
     <filter id="soften" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="58" />
     </filter>
-    <!-- Fades the grid out before the rule and marquee band at the bottom. -->
+    <!-- Fades the grid out before the rule at the bottom. -->
     <linearGradient id="vfade" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0"    stop-color="#FFF" />
       <stop offset="0.62" stop-color="#FFF" />
@@ -154,13 +134,6 @@ ${frames}
     <text class="meta rise d4" x="68" y="209">QUEENS, NYC</text>
 
     <line class="rule draw" x1="48" y1="252" x2="952" y2="252" />
-
-    <g mask="url(#edges)">
-      <g class="track">
-        <text class="tick" x="48" y="292" textLength="1700" lengthAdjust="spacing">${ROLES}</text>
-        <text class="tick" x="1748" y="292" textLength="1700" lengthAdjust="spacing">${ROLES}</text>
-      </g>
-    </g>
   </g>
 </svg>
 `;

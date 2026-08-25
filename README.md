@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img src="assets/hero-light.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product. Previously MavenStudio, AutoBulletin, 413 Youth Club, En Hakkore Cafe, Scout, NASA L'SPACE, and Research Foundation of CUNY." width="100%">
+  <img src="assets/hero-light.svg" alt="Dennis Do, Product Manager and Builder, Queens NYC. I direct AI agents to build and ship real product." width="100%">
 </picture>
 
 # Dennis Do
