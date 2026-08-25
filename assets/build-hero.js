@@ -101,16 +101,10 @@ function build(themeName) {
     <filter id="soften" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="58" />
     </filter>
-    <!-- Fades the grid out before the rule at the bottom. -->
-    <linearGradient id="vfade" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0"    stop-color="#FFF" />
-      <stop offset="0.62" stop-color="#FFF" />
-      <stop offset="0.78" stop-color="#000" />
-      <stop offset="1"    stop-color="#000" />
-    </linearGradient>
-    <!-- Clears the grid out from behind the copy block on the left. -->
+    <!-- Clears the grid out from behind the copy block on the left. The grid
+         itself runs to every edge of the panel. -->
     <mask id="keepClear">
-      <rect width="${W}" height="${H}" fill="url(#vfade)" />
+      <rect width="${W}" height="${H}" fill="#FFF" />
       <ellipse cx="300" cy="140" rx="300" ry="105" fill="#000" filter="url(#soften)" />
     </mask>
 
